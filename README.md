@@ -22,3 +22,8 @@ So if your instance is pretty big, commands like `occ files:scan` will time out 
 
 ## TODOs:
 See [open issues](https://github.com/Adphi/occweb/issues)
+
+## Update:
+code am 02.11.24 angepasst, wie beschrieben
+https://github.com/Adphi/occweb/issues/14
+
