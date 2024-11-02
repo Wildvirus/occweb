@@ -30,16 +30,20 @@ class OccController extends Controller
     $this->logger = $logger;
     $this->userId = $userId;
 
+    // Obtendo o IAppManager como sexto argumento
     $this->application = new Application(
       OC::$server->getConfig(),
       OC::$server->get(\OCP\EventDispatcher\IEventDispatcher::class),
       new FakeRequest(),
       OC::$server->get(LoggerInterface::class),
-      OC::$server->query(MemoryInfo::class)
+      OC::$server->query(MemoryInfo::class),
+      OC::$server->get(\OCP\App\IAppManager::class) // Obtenção do IAppManager
     );
+    
     $this->application->setAutoExit(false);
     $this->output = new OccOutput(OutputInterface::VERBOSITY_NORMAL, true);
     $this->application->loadCommands(new StringInput(""), $this->output);    
+
     $reflectionProperty = new \ReflectionProperty(Application::class, 'application');
     $reflectionProperty->setAccessible(true);
     $this->symphonyApplication = $reflectionProperty->getValue($this->application);
