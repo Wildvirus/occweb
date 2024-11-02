@@ -2,10 +2,10 @@
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>occweb</id>
-    <name>OCC Web</name>
+    <name>OCC Webfork</name>
     <summary>OCC Commands in a web terminal</summary>
     <description><![CDATA[Run OCC Commands in a web terminal]]></description>
-    <version>0.1.2_30</version>
+    <version>0.1.2_30_mod</version>
     <licence>agpl</licence>
     <author mail="adphi.apps@gmail.com" >Adphi</author>
     <namespace>OCCWeb</namespace>
@@ -19,7 +19,7 @@
     </dependencies>
     <navigations>
         <navigation role="admin">
-            <name>OCCWeb</name>
+            <name>OCCWebfork</name>
             <route>occweb.occ.index</route>
             <icon>app.svg</icon>
             <type>link</type>
